@@ -8,6 +8,8 @@ TagManager:
   - Trigger2
   - Trigger3
   - cannonBall
+  - Bomb
+  - Explode
   layers:
   - Default
   - TransparentFX

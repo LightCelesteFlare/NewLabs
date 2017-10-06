@@ -25,7 +25,7 @@ public class Explosion : MonoBehaviour {
     void Update()
     {
         explodeDelay -= Time.deltaTime;
-        if(explodeDelay < 0)
+        if (explodeDelay < 0)
         {
             exploded = true;
         }

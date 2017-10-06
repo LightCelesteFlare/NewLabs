@@ -5,18 +5,22 @@ using UnityEngine;
 public class SpawnBomb : MonoBehaviour {
 
     public GameObject bomb;
+    public Transform spawn;
 
+    // Use this for initialization
+    void Start()
+    {
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
-            print(Input.mousePosition);
-            Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
-
-            Instantiate(bomb, new Vector3(p.x, p.y, 0.0f), Quaternion.identity);
+            Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            spawnPosition.z = 0.0f;
+            GameObject objectInstance = Instantiate(bomb, spawnPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
 
         }
     }
