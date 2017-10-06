@@ -61,9 +61,9 @@ public class Explosion : MonoBehaviour {
         {
             if(other.gameObject.GetComponent<Rigidbody2D>() != null)
             {
-                Vector3 direction = explosionforce * (target - explosionPosition);
+                Vector3 direction = explosionforce * (target - explosionPosition); // flip them around to do a vertex mode
 
-                other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction.x / 2f, direction.y * 10f));
+                other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction.x * 2f, direction.y * 4f));
             }
         }
     }
