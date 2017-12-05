@@ -138,8 +138,8 @@ MonoBehaviour:
   explosionRate: 1
   explosionforce: 50
   explosion_max_size: 15
-  explodeDelay: 1.9
-  currentRadius: 0
+  explodeDelay: 1.85
+  currentRadius: 3
 --- !u!212 &212451053139716344
 SpriteRenderer:
   m_ObjectHideFlags: 1
